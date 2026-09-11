@@ -70,11 +70,22 @@
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-3">
-                    <div class="bg-safety-500 text-white p-2 rounded-lg">
-                        <i class="fa-solid fa-hard-hat text-xl"></i>
+                <div class="flex items-center gap-8">
+                    <!-- Brand Logo -->
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="bg-safety-500 text-white p-2 rounded-lg">
+                            <i class="fa-solid fa-hard-hat text-xl"></i>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-gray-900">SafetyHub</span>
+                    </a>
+                    <!-- GNB Menu (이동식크레인 안전성검토 링크 추가) -->
+                    <div class="hidden md:flex items-center gap-1">
+                        <a href="https://ksnsmart.vercel.app/crane.html" target="_blank" class="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-amber-600 bg-amber-50 hover:bg-amber-100 rounded-lg transition">
+                            <i class="fa-solid fa-truck-monster text-amber-500"></i>
+                            <span>이동식크레인 안전성검토</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70"></i>
+                        </a>
                     </div>
-                    <span class="font-bold text-xl tracking-tight text-gray-900">SafetyHub</span>
                 </div>
                 <div class="flex items-center gap-4">
                     <button class="text-gray-500 hover:text-safety-600 transition" title="알림">
@@ -210,17 +221,38 @@
                             </div>
                             <h3 class="font-bold text-lg mb-2">비상 대응망</h3>
                             <ul class="text-sm text-gray-600 space-y-2">
-                                <li class="hover:text-red-600 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 현장 비상연락망 도도</li>
+                                <li class="hover:text-red-600 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 현장 비상연락망 지도</li>
                                 <li class="hover:text-red-600 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 중대재해 발생 시 매뉴얼</li>
                                 <li class="hover:text-red-600 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs"></i> 인근 지정 병원 위치</li>
                             </ul>
                         </div>
+
+                        <!-- Card 5 (신규 추가: 이동식크레인 안전성검토 카드 바로가기) -->
+                        <a href="https://ksnsmart.vercel.app/crane.html" target="_blank" class="border border-amber-200 rounded-xl p-5 hover-card bg-amber-50/40 cursor-pointer group block">
+                            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                                <i class="fa-solid fa-truck-monster"></i>
+                            </div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-bold text-lg text-gray-900 group-hover:text-amber-600 transition">이동식크레인 안전성검토</h3>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm text-gray-400 group-hover:text-amber-500"></i>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-3">장비 제원, 작업 반경 및 전도 위험성 자동 시뮬레이션</p>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li class="group-hover:text-amber-700 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-amber-500"></i> 크레인 작업계획서 작성 및 검토</li>
+                                <li class="group-hover:text-amber-700 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-amber-500"></i> 정격하중 및 인양능력표 계산</li>
+                                <li class="group-hover:text-amber-700 flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-amber-500"></i> 지반 지지력 & 아웃트리거 반력 검토</li>
+                            </ul>
+                        </a>
+
                     </div>
                     
                     <!-- Useful External Links -->
                     <div class="mt-8 pt-6 border-t border-gray-100">
                         <h3 class="text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider">외부 시스템 연동</h3>
                         <div class="flex flex-wrap gap-3">
+                            <a href="https://ksnsmart.vercel.app/crane.html" target="_blank" class="px-4 py-2 bg-amber-50 hover:bg-amber-100 border border-amber-200 rounded-lg text-sm font-semibold text-amber-800 transition flex items-center gap-2">
+                                이동식크레인 안전성검토 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-600"></i>
+                            </a>
                             <a href="#" class="px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-lg text-sm font-medium text-gray-700 transition flex items-center gap-2">
                                 안전보건공단 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400"></i>
                             </a>
@@ -343,7 +375,6 @@
 
         // Initial render
         renderTasks();
-
     </script>
 </body>
 </html>
